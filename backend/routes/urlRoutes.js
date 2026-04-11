@@ -61,7 +61,7 @@ router.post("/shorten", auth, async (req, res) => {
         let shortCode;
         let isUnique = false;
         let attempts = 0;
-        const maxAttempts = 10; // Prevent infinite loop
+        const maxAttempts = 10; 
 
         while (!isUnique && attempts < maxAttempts) {
             shortCode = nanoid(6);
